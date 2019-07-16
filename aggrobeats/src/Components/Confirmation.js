@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { Header, Button, Grid, ButtonGroup, Card } from "semantic-ui-react";
-import back from "../assets/backAbB.png";
 import Navbar from "./Navbar";
+import back from "../assets/backAbB.png";
 
 export default class Confirmation extends Component {
   goto = link => this.props.history.push(link);
