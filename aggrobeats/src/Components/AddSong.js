@@ -29,7 +29,7 @@ export default class AddSong extends Component {
       >
         <Navbar history={this.props.history} />
         <Grid centered>
-          <Header as="h1" inverted style={{ marginTop: 150, marginBottom: 50 }}>
+          <Header as="h1" inverted style={{ marginTop: 68, marginBottom: 50 }}>
             Add New Song
           </Header>
         </Grid>
@@ -62,7 +62,18 @@ export default class AddSong extends Component {
                 size="medium"
               />
               <Divider />
-              <Form.Group inline widths="equal">
+              <Form.Group>
+                <Form.Input
+                  placeholder="Song Name"
+                  label="Song Name:"
+                  width="16"
+                />
+              </Form.Group>
+              <Form.Group style={{ marginTop: 0, marginBottom: 30 }}>
+                <Form.Input placeholder="Artists" label="Artists" width="16" />
+                <Icon name="question circle" inverted />
+              </Form.Group>
+              <Form.Group widths={4} style={{ marginTop: 20, marginBottom: 0 }}>
                 <label>Upload Quality:</label>
                 <Form.Radio
                   label="Auto"
