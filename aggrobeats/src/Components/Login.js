@@ -34,7 +34,7 @@ export default class Login extends Component {
             <Header
               as="h1"
               textAlign="center"
-              style={{ marginTop: 0, marginBottom: 50 }}
+              style={{ marginTop: 0, marginBottom: 28 }}
               color="orange"
             >
               Aggrobeats
@@ -55,6 +55,14 @@ export default class Login extends Component {
                 Submit
               </Button>
             </Form>
+            <Header
+              textAlign="center"
+              as="h4"
+              color="blue"
+              style={{ marginTop: 15, marginBottom: 150, cursor: "pointer" }}
+            >
+              <u>New user? Register here</u>
+            </Header>
           </Modal.Content>
         </Modal>
       </div>
