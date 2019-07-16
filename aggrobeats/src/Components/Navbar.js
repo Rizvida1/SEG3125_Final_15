@@ -7,7 +7,7 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <Menu inverted widths={5} borderless>
+      <Menu inverted widths={6} borderless>
         <Menu.Item name="logo" onClick={() => this.goto("/home")}>
           <Image src={logo} size="mini" />
           <Header
@@ -34,6 +34,9 @@ export default class Navbar extends Component {
         </Menu.Item>
         <Menu.Item name="support" onClick={() => this.goto("/Addsong")}>
           Add New Song
+        </Menu.Item>
+        <Menu.Item name="logout" onClick={() => this.goto("/")}>
+          Logout
         </Menu.Item>
       </Menu>
     );
