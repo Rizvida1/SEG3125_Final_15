@@ -7,7 +7,7 @@ export default class Home extends Component {
     return (
       <div>
         <Header as="h1">Home</Header>
-        <Link to="/">
+        <Link to="/Confirmation">
           <Button>Click Here</Button>
         </Link>
       </div>
