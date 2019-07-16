@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Header, Button, Grid, ButtonGroup, Card } from "semantic-ui-react";
-import Navbar from "./Navbar";
 import back from "../assets/backAbB.png";
+import Navbar from "./Navbar";
 
 export default class Confirmation extends Component {
   goto = link => this.props.history.push(link);
@@ -16,17 +17,17 @@ export default class Confirmation extends Component {
       >
         <Navbar history={this.props.history} />
 
-        <Grid centered middle aligned one column grid>
+        <Grid centered>
           <Card fluid style={{ background: "#0004", marginTop: 250 }}>
             <Grid centered columns={1}>
               <Grid.Column>
                 <Header
                   as="h1"
-                  content="Song Distributed!"
+                  content="Song Distributed Successfully!"
                   subheader="The song will be available in 2 to 4 days."
                   textAlign="center"
                   inverted
-                  style={{ marginTop: 28, marginBottom: 0 }}
+                  style={{ marginTop: 18, marginBottom: 0 }}
                 />
               </Grid.Column>
               <Grid.Row centered columns={2}>
