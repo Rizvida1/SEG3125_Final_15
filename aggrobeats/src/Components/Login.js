@@ -6,7 +6,8 @@ import {
   Modal,
   Form,
   Checkbox,
-  Image
+  Image,
+  Icon
 } from "semantic-ui-react";
 import logo from "../assets/logo.png";
 import back from "../assets/backAb.png";
@@ -51,8 +52,17 @@ export default class Login extends Component {
               <Form.Field>
                 <Checkbox label="Keep me signed in" />
               </Form.Field>
-              <Button type="submit" color="orange" style={{ width: "100%" }}>
-                Submit
+              <Button
+                type="submit"
+                color="orange"
+                style={{ width: "100%" }}
+                inverted
+                animated
+              >
+                <Button.Content visible>Login</Button.Content>
+                <Button.Content hidden>
+                  <Icon name="arrow right" />
+                </Button.Content>
               </Button>
             </Form>
             <Header
