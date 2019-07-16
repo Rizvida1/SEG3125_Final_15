@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Header, Button } from "semantic-ui-react";
-import back from "../assets/backAb.png";
+import back from "../assets/backAbB.png";
 import Navbar from "./Navbar";
 
 export default class Confirmation extends Component {
@@ -13,8 +13,7 @@ export default class Confirmation extends Component {
           backgroundImage: `url(${back})`
         }}
       >
-        <Navbar />
-
+        <Navbar history={this.props.history} />
         <Header
           as="h1"
           content="Song Distributed!"
