@@ -28,8 +28,9 @@ export default class AddSong extends Component {
             Add New Song
           </Header>
         </Grid>
-        <Grid columns={2} verticalAlign="middle" centered>
-          <Grid.Column>
+        <Grid verticalAlign="middle" centered>
+            
+          <Grid.Row>
             <Form inverted>
               <Form.Group inline>
                 <Form.Input
@@ -65,16 +66,14 @@ export default class AddSong extends Component {
               </Form.Group>
 
               <Form.Checkbox label="I agree to the Terms and Conditions" />
-              <Form.Button>Submit</Form.Button>
+              <Form.Button>
+                <Link to="/confirmation">
+                    Submit
+                </Link>
+              </Form.Button>
             </Form>
-          </Grid.Column>
+          </Grid.Row>
         </Grid>
-
-        <div>
-          <Link to="/confirmation">
-            <Button>Add New Song</Button>
-          </Link>
-        </div>
       </div>
     );
   }

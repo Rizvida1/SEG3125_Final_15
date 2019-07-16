@@ -16,7 +16,7 @@ export default class Confirmation extends Component {
       >
         <Navbar history={this.props.history} />
 
-        <Grid centered>
+        <Grid centered middle aligned one column grid>
           <Card fluid style={{ background: "#0004", marginTop: 250 }}>
             <Grid centered columns={1}>
               <Grid.Column>
