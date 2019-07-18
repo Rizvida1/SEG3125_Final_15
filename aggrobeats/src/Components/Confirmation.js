@@ -1,6 +1,12 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Header, Button, Grid, ButtonGroup, Card } from "semantic-ui-react";
+import {
+  Header,
+  Button,
+  Grid,
+  ButtonGroup,
+  Card,
+  Icon
+} from "semantic-ui-react";
 import back from "../assets/backAbB.png";
 import Navbar from "./Navbar";
 
@@ -36,15 +42,23 @@ export default class Confirmation extends Component {
                     color="orange"
                     inverted
                     onClick={() => this.goto("/home")}
+                    animated="fade"
                   >
-                    Go Home
+                    <Button.Content visible>Go to Dashboard</Button.Content>
+                    <Button.Content hidden>
+                      <Icon name="home" />
+                    </Button.Content>
                   </Button>
                   <Button
                     color="teal"
                     inverted
                     onClick={() => this.goto("/home")}
+                    animated="fade"
                   >
-                    View Details
+                    <Button.Content visible>View Details</Button.Content>
+                    <Button.Content hidden>
+                      <Icon name="eye" />
+                    </Button.Content>
                   </Button>
                 </ButtonGroup>
               </Grid.Row>

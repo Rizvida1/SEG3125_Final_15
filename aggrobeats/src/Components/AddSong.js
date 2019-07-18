@@ -8,13 +8,14 @@ import {
   Icon,
   Divider,
   Card,
-  Checkbox
+  Checkbox,
+  Popup
 } from "semantic-ui-react";
 import Navbar from "./Navbar";
 import back from "../assets/backAbB.png";
 
 export default class AddSong extends Component {
-  state = { progress: 0 };
+  state = { progress: 0, value: "sm" };
 
   handleChange = (e, { value }) => this.setState({ value });
 
@@ -71,7 +72,11 @@ export default class AddSong extends Component {
               </Form.Group>
               <Form.Group style={{ marginTop: 0, marginBottom: 30 }}>
                 <Form.Input placeholder="Artists" label="Artists" width="16" />
-                <Icon name="question circle" inverted />
+                <Popup
+                  position="right center"
+                  content="Separate multiple artists using comma (,)"
+                  trigger={<Icon name="question circle" inverted />}
+                />
               </Form.Group>
               <Form.Group widths={4} style={{ marginTop: 20, marginBottom: 0 }}>
                 <label>Upload Quality:</label>
@@ -116,7 +121,7 @@ export default class AddSong extends Component {
                   style={{ marginLeft: 50, marginBottom: 10 }}
                 />
                 <Checkbox
-                  label="Youtube Music"
+                  label="Google Play Music"
                   style={{ marginLeft: 50, marginBottom: 10 }}
                 />
                 <Checkbox
@@ -134,6 +139,7 @@ export default class AddSong extends Component {
               </Card>
 
               <Form.Checkbox
+                required
                 label="I agree to the Terms and Conditions"
                 style={{ marginTop: 20, marginBottom: 0 }}
               />
@@ -145,9 +151,9 @@ export default class AddSong extends Component {
                 fluid
                 style={{ marginTop: 25, marginBottom: 10 }}
               >
-                <Button.Content visible>Upload</Button.Content>
+                <Button.Content visible>Distribute</Button.Content>
                 <Button.Content hidden>
-                  <Icon name="check" />
+                  <Icon name="share square" />
                 </Button.Content>
               </Button>
             </Form>

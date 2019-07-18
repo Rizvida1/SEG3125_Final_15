@@ -7,7 +7,7 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <Menu inverted widths={6} borderless>
+      <Menu inverted widths={6} borderless stackable>
         <Menu.Item name="logo" onClick={() => this.goto("/home")}>
           <Image src={logo} size="mini" />
           <Header
